@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0%;
+  margin: 0;
+  color: azure;
+}
+@mixin sp-layout {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+body {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  background: #050c13;
+  background-image: url("../public/Assets/images/shapes.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
